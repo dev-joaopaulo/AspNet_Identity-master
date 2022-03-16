@@ -1,0 +1,20 @@
+﻿@model Alura_AspNet_Identity.ViewModels.AccountLoginViewModel
+
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Login</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary("", new { @class = "text-danger" })
+
+    @Html.EditorForModel()
+
+    <hr />
+
+    <input type="submit" value="Login" />
+
+}
